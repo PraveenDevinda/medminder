@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { View, Text, FlatList, Pressable, Modal, StyleSheet } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
-import { medicines, categories } from '../../data/medicines';
-import MedicineCard from '../../components/MedicineCard';
+import { medicines, categories } from '../../../data/medicines';
+import MedicineCard from '../../../components/MedicineCard';
 
 export default function MedicinesScreen() {
   const router = useRouter();

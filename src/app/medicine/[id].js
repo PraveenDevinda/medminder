@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native';
 import { useLocalSearchParams } from 'expo-router';
-import { medicines } from '../../data/medicines';
+import { medicines } from '../../../data/medicines';
 
 export default function MedicineDetail() {
   const { id } = useLocalSearchParams();
