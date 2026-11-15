@@ -1,9 +1,13 @@
 import { Stack } from 'expo-router';
+import { MedsProvider } from '../../context/MedsContext';
+
 export default function RootLayout() {
   return (
-    <Stack>
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      <Stack.Screen name="medicine" options={{ headerShown: false }} />
-    </Stack>
+    <MedsProvider>
+      <Stack>
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="medicine" options={{ headerShown: false }} />
+      </Stack>
+    </MedsProvider>
   );
 }
