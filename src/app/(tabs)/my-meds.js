@@ -3,6 +3,7 @@ import { useRouter } from 'expo-router';
 import { medicines } from '../../../data/medicines';
 import { useMeds } from '../../../context/MedsContext';
 import MedicineCard from '../../../components/MedicineCard';
+import { colors } from '../../../constants/theme';
 
 export default function MyMedsScreen() {
   const router = useRouter();
@@ -29,6 +30,6 @@ export default function MyMedsScreen() {
   );
 }
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 12, backgroundColor: '#f4f6f8' },
-  empty: { textAlign: 'center', marginTop: 40, color: '#777' },
+  container: { flex: 1, padding: 12, backgroundColor: colors.bg },
+  empty: { textAlign: 'center', marginTop: 40, color: colors.muted },
 });
