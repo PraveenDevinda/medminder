@@ -54,3 +54,13 @@ export async function scheduleDaily(title, body, hour, minute) {
 export async function cancelReminder(notificationId) {
   await Notifications.cancelScheduledNotificationAsync(notificationId);
 }
+
+export async function scheduleAtDate(title, body, date) {
+  return Notifications.scheduleNotificationAsync({
+    content: { title, body },
+    trigger: {
+      type: Notifications.SchedulableTriggerInputTypes.DATE,
+      date,
+    },
+  });
+}
